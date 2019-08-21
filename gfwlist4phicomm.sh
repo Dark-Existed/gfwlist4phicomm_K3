@@ -37,7 +37,7 @@ process(){
     DOMAIN_FILE="$TMP_DIR/gfwlist2domain.txt"
     CONF_TMP_FILE="$TMP_DIR/gfwlist.conf.tmp"
     OUT_TMP_FILE="$TMP_DIR/gfwlist.out.tmp"
-    OUT_FILE="/root/ssr/gfw_addr.conf"
+    OUT_FILE="/etc/dnsmasq.gfw/gfw_addr.conf"
 
     if [ ! -d $TMP_DIR ];then
         mkdir $TMP_DIR
@@ -94,6 +94,8 @@ process(){
     fi
 
     cp $OUT_TMP_FILE $OUT_FILE
+    cp $OUT_FILE /tmp/dnsmasq.d/gfw_addr.conf
+    /mnt/mtdblock6/etc/dnsmasq.gfw/gfw_addr.conf
     printf '\nConverting gfwlist to dnsmasq rules... Done\n\n'
 
     # Clean up
