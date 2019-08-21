@@ -95,11 +95,12 @@ process(){
 
     cp $OUT_TMP_FILE $OUT_FILE
     cp $OUT_FILE /tmp/dnsmasq.d/gfw_addr.conf
-    /mnt/mtdblock6/etc/dnsmasq.gfw/gfw_addr.conf
     printf '\nConverting gfwlist to dnsmasq rules... Done\n\n'
 
     # Clean up
     clean_and_exit 0
+    
+    /etc/init.d/dnsmasq restart
 }
 
 main() {
