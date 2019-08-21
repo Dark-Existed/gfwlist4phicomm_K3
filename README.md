@@ -1,5 +1,5 @@
 # gfwlist4phicomm
-Update the gfwlist for an unofficial Phicomm ROM.
+Update the gfwlist for an unofficial Phicomm K2 ROM.
 
 Working on this [Phicomm K3 ROM](http://www.right.com.cn/forum/thread-259012-1-1.html). May be compatible with other K3C / K2 / K2P ROMs.
 
