@@ -96,9 +96,6 @@ process(){
     cp $OUT_TMP_FILE $OUT_FILE
     printf '\nConverting gfwlist to dnsmasq rules... Done\n\n'
 
-    # Restart SSR (drop all output)
-    nohup /root/ssrcmd.sh restart >/dev/null 2>&1 &
-
     # Clean up
     clean_and_exit 0
 }
